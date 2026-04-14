@@ -653,4 +653,80 @@ textarea {
   .summary-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .phone-screen,
+.app-shell,
+.app-screen,
+.screen-scroll,
+.humidity-scroll,
+.humidity-content {
+  overflow-x: hidden;
+}
+
+.humidity-card,
+.chart-card,
+.material-card,
+.summary-tile,
+.recommendation-card,
+.suggestion-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.humidity-hero-copy,
+.humidity-topbar__brand,
+.humidity-topbar__brand-copy,
+.recommendation-card,
+.suggestion-card,
+.material-card,
+.hero-meta-row {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+strong,
+.updated-text,
+.suggestion-card,
+.recommendation-card p,
+.recommendation-card h3 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.chart-card,
+.chart-wrap {
+  overflow: hidden;
+}
+
+.chart {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hero-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+}
+
+.updated-text {
+  text-align: center;
+  overflow-wrap: break-word;
+}
 }
