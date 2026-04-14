@@ -641,6 +641,10 @@ textarea {
   padding-bottom: 73px;
 }
 
+#recommendationPill {
+  margin-bottom: 20px;
+}
+
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 640px) {
   body {
