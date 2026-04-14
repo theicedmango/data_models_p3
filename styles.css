@@ -471,7 +471,7 @@ textarea {
 
 #chartPoints circle {
   fill: var(--state-color);
-  stroke: #17181a;
+  stroke: #ffffff;
   stroke-width: 2;
 }
 
