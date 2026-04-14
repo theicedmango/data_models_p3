@@ -553,8 +553,10 @@ textarea {
 
 .summary-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .summary-tile {
@@ -562,6 +564,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 18px;
   padding: 12px 10px;
+  min-width: 0;
 }
 
 .summary-tile span {
