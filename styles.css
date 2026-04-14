@@ -204,6 +204,7 @@ textarea {
 
 .humidity-scroll {
   background: #141414;
+  overflow-x: hidden;
 }
 
 .humidity-content {
@@ -222,6 +223,9 @@ textarea {
   border-radius: var(--radius-xl);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.16);
   padding: 16px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .humidity-card--hero {
