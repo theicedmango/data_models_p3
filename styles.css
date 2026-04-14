@@ -73,7 +73,7 @@ textarea {
   position: absolute;
   left: 9.9%;
   top: 8.5%;
-  width: 79%;
+  width: 81%;
   height: 83.3%;
   overflow: hidden;
   background: #141414;
@@ -250,8 +250,9 @@ textarea {
 .humidity-hero-grid {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 16px;
+  width: 100%;
 }
 
 .humidity-hero-copy h1 {
@@ -260,6 +261,9 @@ textarea {
   line-height: 0.98;
   letter-spacing: -0.06em;
   color: #fff;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .dynamic-accent {
