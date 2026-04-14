@@ -207,10 +207,13 @@ textarea {
 }
 
 .humidity-content {
-  padding: 10px 0px 60px;
-  display: grid;
+  padding: 10px 0 60px;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .humidity-card {
