@@ -13,7 +13,7 @@
   --radius-xl: 0px;
   --radius-lg: 16px;
   --radius-md: 12px;
-  --nav-height: 92px;
+  --nav-height: 82px;
   --state-color: #06ae42;
   --fill-percent: 0%;
 }
@@ -177,15 +177,15 @@ textarea {
 }
 
 .nav-btn span {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
   letter-spacing: -0.02em;
   color: #f3f3f4;
 }
 
 .nav-icon {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
   display: block;
 }
@@ -471,7 +471,7 @@ textarea {
 
 #chartPoints circle {
   fill: var(--state-color);
-  stroke: #ffffff;
+  stroke: #17181a;
   stroke-width: 2;
 }
 
