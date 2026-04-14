@@ -672,6 +672,10 @@ textarea {
     padding: 12px;
   }
 
+  .page-shell {
+    padding: 32px 16px 20px;
+  }
+  
   .phone-mockup {
     width: 96vw;
   }
