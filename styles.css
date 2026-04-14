@@ -71,9 +71,9 @@ textarea {
 
 .phone-screen {
   position: absolute;
-  left: 9.9%;
+  left: 9.7%;
   top: 8.5%;
-  width: 81.25%;
+  width: 81.35%;
   height: 83.3%;
   overflow: hidden;
   background: #141414;
@@ -352,9 +352,11 @@ textarea {
 .hero-meta-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-top: 14px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .status-pill {
@@ -415,23 +417,26 @@ textarea {
 }
 
 .range-switch button {
-  border: 0;
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #2a2a2a;
   color: #cfd2d8;
   font-size: 11px;
   font-weight: 700;
   padding: 8px 10px;
   border-radius: 999px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .range-switch button.active {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  color: #cfd2d8;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .chart-card {
-  background: #242424;
+  background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 22px;
   padding: 16px 12px 12px;
@@ -448,7 +453,7 @@ textarea {
 }
 
 .grid line {
-  stroke: rgba(255, 255, 255, 0.08);
+  stroke: rgba(0, 0, 0, 0.08);
   stroke-width: 1;
 }
 
@@ -471,7 +476,7 @@ textarea {
 }
 
 #chartLabels text {
-  fill: #80848b;
+  fill: #666;
   font-size: 10px;
   font-weight: 700;
 }
@@ -615,6 +620,10 @@ textarea {
 }
 
 #screen-models .screen-image {
+  padding-bottom: 73px;
+}
+
+#screen-account .screen-image {
   padding-bottom: 73px;
 }
 
