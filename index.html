@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bambu Handy Humidity Mockup</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <div class="phone-stage">
+      <div class="phone-mockup">
+
+        <!-- INTERACTIVE SCREEN -->
+        <div class="phone-screen">
+          <div class="app-shell">
+
+            <!-- MODELS SCREEN -->
+            <section class="app-screen active" id="screen-models">
+              <div class="screen-scroll screen-scroll--image">
+                <img
+                  class="screen-image"
+                  src="Screens/models-menu-long.png"
+                  alt="Bambu Handy models screen"
+                />
+              </div>
+            </section>
+
+            <!-- DEVICES SCREEN -->
+            <section class="app-screen" id="screen-devices">
+              <div class="screen-scroll">
+                <img
+                  class="sticky-screen-nav"
+                  src="Screens/printer-menu-nav.png"
+                  alt="Printer menu top navigation"
+                />
+
+                <img
+                  class="screen-image"
+                  src="Screens/printer-menu.png"
+                  alt="Bambu Handy devices screen"
+                />
+              </div>
+            </section>
+
+            <!-- HUMIDITY SCREEN -->
+            <section class="app-screen" id="screen-humidity">
+              <div class="screen-scroll humidity-scroll">
+
+                <img
+                    class="sticky-screen-nav"
+                    src="Screens/printer-menu-nav.png"
+                    alt="Printer menu top navigation"
+                />
+
+                <div class="humidity-content">
+
+                  <!-- HERO -->
+                  <section class="humidity-card humidity-card--hero">
+                    <p class="eyebrow">LIVE ROOM STATUS</p>
+
+                    <div class="humidity-hero-grid">
+                      <div class="humidity-hero-copy">
+                        <h1>
+                          The room is sitting at
+                          <span class="dynamic-accent" id="humiditySentence">--% humidity.</span>
+                        </h1>
+
+                        <p class="body-copy" id="roomMoodText">
+                          Waiting for live humidity data from your print room.
+                        </p>
+
+                        <div class="mini-tags">
+                          <span class="mini-tag" id="miniTag1">PLA is usually forgiving</span>
+                          <span class="mini-tag" id="miniTag2">PETG, keep an eye on it</span>
+                          <span class="mini-tag" id="miniTag3">Nylon would like a dry box</span>
+                        </div>
+                      </div>
+
+                      <div class="orb-wrap">
+                        <div class="humidity-orb" id="humidityOrb">
+                          <div class="orb-inner">
+                            <span>Humidity</span>
+                            <strong id="orbValue">--%</strong>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="hero-meta-row">
+                      <span class="status-pill good" id="humidityStatus">Loading...</span>
+                      <span class="updated-text" id="lastUpdated">Waiting for sensor data</span>
+                    </div>
+                  </section>
+
+                  <!-- HISTORY -->
+                  <section class="humidity-card">
+                    <p class="eyebrow">ROOM HISTORY</p>
+
+                    <h2 class="section-title">
+                      Your room had a few
+                      <span class="dynamic-accent" id="moodSwingsText">mood swings.</span>
+                    </h2>
+
+                    <p class="section-note" id="chartDescription">
+                      This chart tracks how humidity changes over time.
+                    </p>
+
+                    <div class="range-switch">
+                      <button class="active" type="button" data-range="24h">24 hours</button>
+                      <button type="button" data-range="week">7 days</button>
+                      <button type="button" data-range="month">30 days</button>
+                    </div>
+
+                    <div class="chart-card">
+                      <div class="chart-wrap">
+                        <svg viewBox="0 0 340 220" class="chart" id="chartSvg">
+                          <g class="grid">
+                            <line x1="24" y1="28" x2="316" y2="28"></line>
+                            <line x1="24" y1="68" x2="316" y2="68"></line>
+                            <line x1="24" y1="108" x2="316" y2="108"></line>
+                            <line x1="24" y1="148" x2="316" y2="148"></line>
+                            <line x1="24" y1="188" x2="316" y2="188"></line>
+                          </g>
+
+                          <rect
+                            x="24"
+                            y="28"
+                            width="292"
+                            height="34"
+                            class="danger-zone"
+                          ></rect>
+
+                          <polyline id="chartLine" class="line-main"></polyline>
+                          <g id="chartPoints" class="points"></g>
+                          <g id="chartLabels" class="axis-labels"></g>
+                          <g id="chartEmptyState"></g>
+                        </svg>
+
+                        <div id="chartTooltip" class="chart-tooltip hidden"></div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- MATERIALS -->
+                  <section class="humidity-card">
+                    <p class="eyebrow">FILAMENT REACTIONS</p>
+
+                    <h2 class="section-title section-title--tight">
+                      Some materials are chill. Others are very dramatic.
+                    </h2>
+
+                    <div class="material-grid">
+                      <article class="material-card">
+                        <h3>PLA</h3>
+                        <p>Least dramatic. Still benefits from dry storage.</p>
+                      </article>
+
+                      <article class="material-card">
+                        <h3>PETG</h3>
+                        <p>Absorbs moisture. Dry before important prints.</p>
+                      </article>
+
+                      <article class="material-card">
+                        <h3>TPU / Nylon</h3>
+                        <p>Very sensitive. Will absolutely cause problems if humid.</p>
+                      </article>
+                    </div>
+                  </section>
+
+                  <!-- SUMMARY -->
+                  <section class="humidity-card">
+                    <p class="eyebrow">SUMMARY</p>
+
+                    <div class="summary-grid">
+                      <div class="summary-tile">
+                        <span>Average</span>
+                        <strong id="avgValue">--%</strong>
+                      </div>
+
+                      <div class="summary-tile">
+                        <span>High</span>
+                        <strong id="highValue">--%</strong>
+                      </div>
+
+                      <div class="summary-tile">
+                        <span>Low</span>
+                        <strong id="lowValue">--%</strong>
+                      </div>
+
+                      <div class="summary-tile">
+                        <span>Risk</span>
+                        <strong id="riskHoursValue">--h</strong>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- RECOMMENDATIONS -->
+                  <section class="humidity-card">
+                    <p class="eyebrow">SO WHAT SHOULD YOU DO?</p>
+
+                    <div class="recommendation-stack">
+                      <div class="recommendation-card">
+                        <span id="recommendationPill" class="status-pill">
+                          Current recommendation
+                        </span>
+
+                        <h3 id="recommendationTitle">Loading recommendation...</h3>
+
+                        <p id="recommendationText">
+                          Waiting for your humidity data so the room can start judging your filament habits.
+                        </p>
+                      </div>
+
+                      <div class="suggestion-grid">
+                        <div class="suggestion-card" id="actionItem1">
+                          Good time for a casual PLA print
+                        </div>
+                        <div class="suggestion-card" id="actionItem2">
+                          Store exposed filament if humidity keeps climbing
+                        </div>
+                        <div class="suggestion-card" id="actionItem3">
+                          Dry PETG or nylon before long prints
+                        </div>
+                        <div class="suggestion-card" id="actionItem4">
+                          Check again before overnight jobs
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="bottom-padding"></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ACCOUNT SCREEN -->
+            <section class="app-screen" id="screen-account">
+              <div class="screen-scroll">
+                <img
+                  class="sticky-screen-nav"
+                  src="Screens/account-menu-nav.png"
+                  alt="Account menu top navigation"
+                />
+
+                <img
+                  class="screen-image"
+                  src="Screens/account-menu.png"
+                  alt="Bambu Handy account screen"
+                />
+              </div>
+            </section>
+
+          </div>
+
+          <!-- GLOBAL BOTTOM NAV -->
+          <nav class="bottom-nav" aria-label="Primary">
+            <button class="nav-btn active" type="button" data-target="models" aria-label="Models">
+              <img
+                class="nav-icon nav-icon-idle"
+                src="Icons/models-idle.png"
+                alt=""
+              />
+              <img
+                class="nav-icon nav-icon-active"
+                src="Icons/models-select.png"
+                alt=""
+              />
+              <span>Models</span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="devices" aria-label="Devices">
+              <img
+                class="nav-icon nav-icon-idle"
+                src="Icons/printer-idle.png"
+                alt=""
+              />
+              <img
+                class="nav-icon nav-icon-active"
+                src="Icons/printer-select.png"
+                alt=""
+              />
+              <span>Devices</span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="humidity" aria-label="Humidity">
+              <img
+                class="nav-icon nav-icon-idle"
+                src="Icons/humidity-idle.png"
+                alt=""
+              />
+              <img
+                class="nav-icon nav-icon-active"
+                src="Icons/humidity-select.png"
+                alt=""
+              />
+              <span>Humidity</span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="account" aria-label="Me">
+              <img
+                class="nav-icon nav-icon-idle"
+                src="Icons/account-idle.png"
+                alt=""
+              />
+              <img
+                class="nav-icon nav-icon-active"
+                src="Icons/account-select.png"
+                alt=""
+              />
+              <span>Me</span>
+            </button>
+          </nav>
+        </div>
+        <!-- PHONE SHELL -->
+      <img
+        class="phone-frame"
+        src="Screens/phone-shell.png"
+        alt="Phone mockup frame"
+      />
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
