@@ -31,6 +31,8 @@ body {
   font-family: "Manrope", -apple-system, BlinkMacSystemFont, "SF Pro Display",
     "SF Pro Text", Inter, Arial, sans-serif;
   color: var(--text);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -256,10 +258,11 @@ textarea {
 
 .humidity-hero-copy h1 {
   margin: 0;
-  font-size: 42px;
+  font-size: 38px;
   line-height: 0.98;
   letter-spacing: -0.06em;
   color: #fff;
+  max-width: 9ch;
 }
 
 .dynamic-accent {
@@ -270,9 +273,9 @@ textarea {
 .body-copy {
   margin: 12px 0 0;
   color: #aeb2b8;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.55;
-  max-width: 28ch;
+  max-width: 24ch;
 }
 
 .mini-tags {
@@ -283,8 +286,8 @@ textarea {
 }
 
 .mini-tag {
-  font-size: 11px;
-  padding: 7px 10px;
+  font-size: 10px;
+  padding: 7px 9px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.14);
