@@ -104,7 +104,7 @@ function setThemeByHumidity(humidity) {
   resetStatusClasses(recommendationPillEl);
 
   if (humidity <= 40) {
-    setStateColor("#59c57d");
+    setStateColor("#06ae42");
 
     if (humidityStatusEl) {
       humidityStatusEl.textContent = "Pretty safe";
@@ -142,7 +142,7 @@ function setThemeByHumidity(humidity) {
       recommendationPillEl.textContent = "Ideal conditions";
     }
   } else if (humidity <= 55) {
-    setStateColor("#dfb958");
+    setStateColor("#cca23c");
 
     if (humidityStatusEl) {
       humidityStatusEl.textContent = "Keep an eye on it";
@@ -180,7 +180,7 @@ function setThemeByHumidity(humidity) {
       recommendationPillEl.textContent = "Monitor conditions";
     }
   } else {
-    setStateColor("#df6c67");
+    setStateColor("#e14749");
 
     if (humidityStatusEl) {
       humidityStatusEl.textContent = "Too humid";
